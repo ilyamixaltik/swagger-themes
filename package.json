@@ -1,9 +1,11 @@
 {
   "name": "swagger-themes",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Library for measuring the topic of Swagger documentation",
   "main": "build/index.js",
-  "scripts": {},
+  "scripts": {
+    "compile": "tsc"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ilyamixaltik/swagger-themes.git"
