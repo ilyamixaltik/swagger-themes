@@ -7,10 +7,10 @@ export class SwaggerTheme {
   getBuffer(name: SwaggerThemeName) {
     if (!this.version || !name || name === 'classic') return '';
 
-    return fs.readFileSync(
+    return String(fs.readFileSync(
       __dirname + `/../themes/${this.version}/${name}.css`,
       'utf8'
-    );
+    ));
   }
 }
 
