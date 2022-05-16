@@ -1,4 +1,31 @@
 {
+  "name": "swagger-themes",
+  "version": "1.0.1",
+  "description": "Library for measuring the topic of Swagger documentation",
+  "main": "src/index.ts",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilyamixaltik/swagger-themes.git"
+  },
+  "keywords": [
+    "swagger",
+    "ui",
+    "swagger-ui-express",
+    "documentation",
+    "swagger-nestjs",
+    "swagger-themes",
+    "swagger-templates",
+    "swagger UI",
+    "flat"
+  ],
+  "author": "Ilya Mixaltik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilyamixaltik/swagger-themes/issues"
+  },
+  "homepage": "https://github.com/ilyamixaltik/swagger-themes#readme",
+  "dependencies": {},
   "devDependencies": {
     "typescript": "^4.6.4"
   }
