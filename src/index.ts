@@ -5,7 +5,7 @@ export class SwaggerTheme {
   constructor(readonly version: VersionSwagger) {}
 
   getBuffer(name: SwaggerThemeName) {
-    if (!this.version || !name || name === 'classic') return null;
+    if (!this.version || !name || name === 'classic') return '';
 
     return fs.readFileSync(
       __dirname + `/../themes/${this.version}/${name}.css`,
