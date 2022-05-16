@@ -1,6 +1,6 @@
 {
   "name": "swagger-themes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Library for measuring the topic of Swagger documentation",
   "main": "src/index.ts",
   "scripts": {},
@@ -19,7 +19,11 @@
     "swagger UI",
     "flat"
   ],
-  "author": "Ilya Mixaltik",
+  "author": {
+    "name": "Ilya Mixaltik",
+    "email": "mixaltik16@gmail.com",
+    "url": "https://vk.com/ilya_mixaltik"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ilyamixaltik/swagger-themes/issues"
