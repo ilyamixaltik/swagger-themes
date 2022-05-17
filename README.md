@@ -275,6 +275,8 @@ app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, option
 ![Dark](./screenshots/dark.jpeg)
 > outline
 ![Outline](./screenshots/outline.jpeg)
+> newspaper
+![Newspaper](./screenshots/newspaper.jpeg)
 
 **My contacts:**
   * [VK](https://vk.com/ilya_mixaltik)
