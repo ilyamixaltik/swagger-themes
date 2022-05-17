@@ -1,6 +1,6 @@
 {
   "name": "swagger-themes",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Library for measuring the topic of Swagger documentation",
   "main": "build/index.js",
   "scripts": {
