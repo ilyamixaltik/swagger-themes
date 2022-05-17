@@ -101,6 +101,41 @@ app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, option
 app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Документация с классической темой
 ```
 
+## Get default config
+### JavaScript
+```js
+const express = require('express');
+const swaggerUi = require('swagger-ui-express');
+const { SwaggerTheme } = require('swagger-themes');
+const swaggerDocument = require('./swagger.json');
+
+const app = express();
+const theme = new SwaggerTheme('v3');
+
+const optionsV1 = theme.getDefaultConfig('dark');
+const optionsV2 = theme.getDefaultConfig('classic');
+
+app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Dark theme documentation
+app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Classic theme documentation
+```
+
+### TypeScript
+```js
+import express from 'express';
+import swaggerUi from 'swagger-ui-express';
+import { SwaggerTheme } from 'swagger-themes';
+import swaggerDocument from './swagger.json';
+
+const app = express();
+const theme = new SwaggerTheme('v3');
+
+const optionsV1 = theme.getDefaultConfig('dark');
+const optionsV2 = theme.getDefaultConfig('classic');
+
+app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Документация с тёмной темой
+app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Документация с классической темой
+```
+
 ## Russian
 > Данная библиотека добавляет возможность "без боли" изменять вашу тему документации Swagger.
 
@@ -193,6 +228,41 @@ const optionsV2 = {
   explorer: true,
   customCss: theme.getBuffer('classic')
 }
+
+app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Документация с тёмной темой
+app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Документация с классической темой
+```
+
+## Get default config
+### JavaScript
+```js
+const express = require('express');
+const swaggerUi = require('swagger-ui-express');
+const { SwaggerTheme } = require('swagger-themes');
+const swaggerDocument = require('./swagger.json');
+
+const app = express();
+const theme = new SwaggerTheme('v3');
+
+const optionsV1 = theme.getDefaultConfig('dark');
+const optionsV2 = theme.getDefaultConfig('classic');
+
+app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Dark theme documentation
+app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Classic theme documentation
+```
+
+### TypeScript
+```js
+import express from 'express';
+import swaggerUi from 'swagger-ui-express';
+import { SwaggerTheme } from 'swagger-themes';
+import swaggerDocument from './swagger.json';
+
+const app = express();
+const theme = new SwaggerTheme('v3');
+
+const optionsV1 = theme.getDefaultConfig('dark');
+const optionsV2 = theme.getDefaultConfig('classic');
 
 app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Документация с тёмной темой
 app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Документация с классической темой
