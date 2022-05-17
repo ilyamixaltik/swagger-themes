@@ -268,6 +268,12 @@ app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, option
 app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Документация с классической темой
 ```
 
+## Themes | Темы
+> classic
+![Classic](./screenshots/classic.jpeg)
+> dark
+![Dark](./screenshots/dark.jpeg)
+
 **My contacts:**
   * [VK](https://vk.com/ilya_mixaltik)
   * [Telegram](https://t.me/ilya_mixaltik)
