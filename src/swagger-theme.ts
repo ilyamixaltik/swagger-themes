@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { SwaggerThemeName, VersionSwagger } from './types';
+import {DefaultConfig, SwaggerThemeName, VersionSwagger} from './types';
 
 export class SwaggerTheme {
   constructor(readonly version: VersionSwagger) {}
@@ -11,5 +11,14 @@ export class SwaggerTheme {
       __dirname + `/../themes/${this.version}/${name}.css`,
       'utf8'
     );
+  }
+
+  getDefaultConfig(theme: SwaggerThemeName): DefaultConfig {
+    const buffer: string = this.getBuffer(theme);
+
+    return {
+      explorer: true,
+      customCss: buffer
+    }
   }
 }
