@@ -11,6 +11,7 @@
     "url": "git+https://github.com/ilyamixaltik/swagger-themes.git"
   },
   "keywords": [
+    "OpenAPI",
     "swagger",
     "ui",
     "swagger-ui-express",
@@ -22,8 +23,7 @@
     "swagger-themes",
     "theme",
     "swagger-templates",
-    "swagger UI",
-    "flat"
+    "swagger UI"
   ],
   "author": {
     "name": "Ilya Mixaltik",
