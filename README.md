@@ -4,6 +4,9 @@
   * [EN](#english)
   * [RU](#russian)
 
+## English
+> This library adds the ability to "painlessly" change your Swagger documentation theme.
+
 ## Installation
 ### npm
 ```bash
@@ -13,9 +16,6 @@ npm i swagger-themes
 ```bash
 yarn add swagger-themes
 ```
-
-## English
-> This library adds the ability to "painlessly" change your Swagger documentation theme.
 
 ## Example usage
 ### JavaScript
