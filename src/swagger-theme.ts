@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import {DefaultConfig, SwaggerThemeName, VersionSwagger} from './types';
+import { DefaultConfig, SwaggerThemeName, VersionSwagger } from './types';
 
 export class SwaggerTheme {
   constructor(readonly version: VersionSwagger) {}
