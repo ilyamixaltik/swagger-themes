@@ -5,12 +5,12 @@ export class SwaggerTheme {
   constructor(readonly version: VersionSwagger) {}
 
   getBuffer(name: SwaggerThemeName) {
-    if (!this.version || !name || name === 'classic') return '';
+    if (!this.version || !name) return '';
 
-    return String(fs.readFileSync(
+    return fs.readFileSync(
       __dirname + `/../themes/${this.version}/${name}.css`,
       'utf8'
-    ));
+    );
   }
 }
 
