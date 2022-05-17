@@ -14,9 +14,13 @@
     "swagger",
     "ui",
     "swagger-ui-express",
+    "express",
     "documentation",
+    "docs",
     "swagger-nestjs",
+    "nestjs",
     "swagger-themes",
+    "theme",
     "swagger-templates",
     "swagger UI",
     "flat"
