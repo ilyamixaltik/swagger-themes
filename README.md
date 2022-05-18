@@ -4,6 +4,14 @@
   * [EN](#english)
   * [RU](./docs/ru.md)
 
+## Navigation
+  * [Installation](#installation)
+  * [Example usage](#example-usage)
+  * [Two Swagger document](#two-swagger-document)
+  * [Get default config](#get-default-config)
+  * [Themes](#themes)
+  * [Contacts](#my-contacts)
+
 ## English
 > This library adds the ability to "painlessly" change your Swagger documentation theme.
 
