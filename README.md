@@ -2,7 +2,7 @@
 
 ## Library documentation language:
   * [EN](#english)
-  * [RU](./docs/ru.md)
+  * [RU](./docs/RU.md)
 
 ## Navigation
   * [Installation](#installation)
