@@ -155,6 +155,8 @@ app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, option
 ![Newspaper](../screenshots/newspaper.jpeg)
 > monokai
 ![Monokai](./screenshots/monokai.jpeg)
+> feeling-blue
+![Feeling blue](./screenshots/feeling-blue.jpeg)
 
 ## Мои контакты
 * [VK](https://vk.com/ilya_mixaltik)
