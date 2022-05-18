@@ -1,13 +1,13 @@
-# Swagger themes
+# Swagger темы
 
-## Library documentation language:
-  * [EN](#english)
-  * [RU](./docs/ru.md)
+## Язык документации библиотеки:
+* [EN](../README.md)
+* [RU](#russian)
 
-## English
-> This library adds the ability to "painlessly" change your Swagger documentation theme.
+## Russian
+> Данная библиотека добавляет возможность "без боли" изменять вашу тему документации Swagger.
 
-## Installation
+## Установка
 ### npm
 ```bash
 npm i swagger-themes
@@ -17,7 +17,7 @@ npm i swagger-themes
 yarn add swagger-themes
 ```
 
-## Example usage
+## Примеры использования
 ### JavaScript
 ```js
 const express = require('express');
@@ -54,7 +54,7 @@ const options = {
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
 ```
 
-## Two Swagger document
+## Два Swagger документа
 ### JavaScript
 ```js
 const express = require('express');
@@ -74,8 +74,8 @@ const optionsV2 = {
   customCss: theme.getBuffer('classic')
 }
 
-app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Dark theme documentation
-app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Classic theme documentation
+app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Тёмная тема документации
+app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Классическая тема документации
 ```
 
 ### TypeScript
@@ -97,11 +97,11 @@ const optionsV2 = {
   customCss: theme.getBuffer('classic')
 }
 
-app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Dark theme documentation
-app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Classic theme documentation
+app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Тёмная тема документации
+app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Классическая тема документации
 ```
 
-## Get default config
+## Получить конфиг по-умолчанию
 ### JavaScript
 ```js
 const express = require('express');
@@ -115,8 +115,8 @@ const theme = new SwaggerTheme('v3');
 const optionsV1 = theme.getDefaultConfig('dark');
 const optionsV2 = theme.getDefaultConfig('classic');
 
-app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Dark theme documentation
-app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Classic theme documentation
+app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Тёмная тема документации
+app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Классическая тема документации
 ```
 
 ### TypeScript
@@ -132,20 +132,20 @@ const theme = new SwaggerTheme('v3');
 const optionsV1 = theme.getDefaultConfig('dark');
 const optionsV2 = theme.getDefaultConfig('classic');
 
-app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Dark theme documentation
-app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Classic theme documentation
+app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Тёмная тема документации
+app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Классическая тема документации
 ```
 
-## Themes
+## Темы
 > classic
-![Classic](./screenshots/classic.jpeg)
+![Classic](../screenshots/classic.jpeg)
 > dark
-![Dark](./screenshots/dark.jpeg)
+![Dark](../screenshots/dark.jpeg)
 > outline
-![Outline](./screenshots/outline.jpeg)
+![Outline](../screenshots/outline.jpeg)
 > newspaper
-![Newspaper](./screenshots/newspaper.jpeg)
+![Newspaper](../screenshots/newspaper.jpeg)
 
-## My contacts
-  * [VK](https://vk.com/ilya_mixaltik)
-  * [Telegram](https://t.me/ilya_mixaltik)
+## Мои контакты
+* [VK](https://vk.com/ilya_mixaltik)
+* [Telegram](https://t.me/ilya_mixaltik)
