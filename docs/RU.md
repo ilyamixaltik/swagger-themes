@@ -26,30 +26,11 @@ yarn add swagger-themes
 ```
 
 ## Примеры использования
-### JavaScript
 ```js
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
 const { SwaggerTheme } = require('swagger-themes');
 const swaggerDocument = require('./swagger.json');
-
-const app = express();
-const theme = new SwaggerTheme('v3');
-
-const options = {
-  explorer: true,
-  customCss: theme.getBuffer('dark')
-};
-
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
-```
-
-### TypeScript
-```js
-import express from 'express';
-import swaggerUi from 'swagger-ui-express';
-import { SwaggerTheme } from 'swagger-themes';
-import swaggerDocument from './swagger.json';
 
 const app = express();
 const theme = new SwaggerTheme('v3');
@@ -63,35 +44,11 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options))
 ```
 
 ## Два Swagger документа
-### JavaScript
 ```js
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
 const { SwaggerTheme } = require('swagger-themes');
 const swaggerDocument = require('./swagger.json');
-
-const app = express();
-const theme = new SwaggerTheme('v3');
-
-const optionsV1 = {
-  explorer: true,
-  customCss: theme.getBuffer('dark')
-};
-const optionsV2 = {
-  explorer: true,
-  customCss: theme.getBuffer('classic')
-}
-
-app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Тёмная тема документации
-app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Классическая тема документации
-```
-
-### TypeScript
-```js
-import express from 'express';
-import swaggerUi from 'swagger-ui-express';
-import { SwaggerTheme } from 'swagger-themes';
-import swaggerDocument from './swagger.json';
 
 const app = express();
 const theme = new SwaggerTheme('v3');
@@ -110,29 +67,11 @@ app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, option
 ```
 
 ## Получить конфиг по-умолчанию
-### JavaScript
 ```js
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
 const { SwaggerTheme } = require('swagger-themes');
 const swaggerDocument = require('./swagger.json');
-
-const app = express();
-const theme = new SwaggerTheme('v3');
-
-const optionsV1 = theme.getDefaultConfig('dark');
-const optionsV2 = theme.getDefaultConfig('classic');
-
-app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Тёмная тема документации
-app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Классическая тема документации
-```
-
-### TypeScript
-```js
-import express from 'express';
-import swaggerUi from 'swagger-ui-express';
-import { SwaggerTheme } from 'swagger-themes';
-import swaggerDocument from './swagger.json';
 
 const app = express();
 const theme = new SwaggerTheme('v3');
