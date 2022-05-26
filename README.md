@@ -26,6 +26,7 @@ yarn add swagger-themes
 ```
 
 ## Example usage
+> Connecting and using the library
 ```js
 const { SwaggerTheme } = require('swagger-themes');
 
@@ -35,6 +36,7 @@ const darkStyle = theme.getBuffer('dark'); // Getting a Style
 
 ## Use with Express
 ### Standard Example
+> Standard dark theme connection with Express. The connection takes place via the swagger-ui-express library
 ```js
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
@@ -53,6 +55,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options))
 ```
 
 ### Two Swagger document
+> Connecting 2 documentation files. For example - 2 different themes are used
 ```js
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
@@ -76,6 +79,7 @@ app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, option
 ```
 
 ### Get default config
+> The method of getting the default config for the swagger library is ui-express
 ```js
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
