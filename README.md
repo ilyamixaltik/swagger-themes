@@ -29,12 +29,12 @@ yarn add swagger-themes
 ```js
 const { SwaggerTheme } = require('swagger-themes');
 
-const theme = new SwaggerTheme('v3'); // Указание версии Swagger
-const darkStyle = theme.getBuffer('dark'); // Получение стиля
+const theme = new SwaggerTheme('v3'); // Specifying the Swagger Version
+const darkStyle = theme.getBuffer('dark'); // Getting a Style
 ```
 
-## Использование с Express
-### Стандартный пример
+## Use with Express
+### Standard Example
 ```js
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
