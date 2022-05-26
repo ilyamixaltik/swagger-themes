@@ -27,6 +27,15 @@ yarn add swagger-themes
 
 ## Примеры использования
 ```js
+const { SwaggerTheme } = require('swagger-themes');
+
+const theme = new SwaggerTheme('v3'); // Указание версии Swagger
+const darkStyle = theme.getBuffer('dark'); // Получение стиля
+```
+
+## Использование с Express
+### Стандартный пример
+```js
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
 const { SwaggerTheme } = require('swagger-themes');
@@ -43,7 +52,7 @@ const options = {
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
 ```
 
-## Два Swagger документа
+### Два Swagger документа
 ```js
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
@@ -66,7 +75,7 @@ app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, option
 app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Классическая тема документации
 ```
 
-## Получить конфиг по-умолчанию
+### Получить конфиг по-умолчанию
 ```js
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
