@@ -101,6 +101,8 @@ app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, option
 ![Classic](./screenshots/classic.jpeg)
 > dark
 ![Dark](./screenshots/dark.jpeg)
+> flattop
+![Flattop](./screenshots/flattop.jpeg)
 > muted
 ![Muted](./screenshots/muted.jpeg)
 > outline
