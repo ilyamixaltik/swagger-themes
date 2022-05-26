@@ -101,18 +101,20 @@ app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, option
 ![Classic](../screenshots/classic.jpeg)
 > dark
 ![Dark](../screenshots/dark.jpeg)
+> feeling-blue
+![Feeling blue](../screenshots/feeling-blue.jpeg)
 > flattop
-![Flattop](./screenshots/flattop.jpeg)
+![Flattop](../screenshots/flattop.jpeg)
+> material
+![Material](../screenshots/material.jpeg)
+> monokai
+![Monokai](../screenshots/monokai.jpeg)
 > muted
-![Muted](./screenshots/muted.jpeg)
-> outline
-![Outline](../screenshots/outline.jpeg)
+![Muted](../screenshots/muted.jpeg)
 > newspaper
 ![Newspaper](../screenshots/newspaper.jpeg)
-> monokai
-![Monokai](./screenshots/monokai.jpeg)
-> feeling-blue
-![Feeling blue](./screenshots/feeling-blue.jpeg)
+> outline
+![Outline](../screenshots/outline.jpeg)
 
 ## Мои контакты
 * [VK](https://vk.com/ilya_mixaltik)
