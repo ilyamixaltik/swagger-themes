@@ -30,7 +30,10 @@
     "email": "mixaltik16@gmail.com",
     "url": "https://vk.com/ilya_mixaltik"
   },
-  "license": "ISC",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/ilyamixaltik/swagger-themes/blob/main/LICENSE.md"
+  },
   "bugs": {
     "url": "https://github.com/ilyamixaltik/swagger-themes/issues"
   },
