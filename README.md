@@ -124,7 +124,7 @@ app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, option
 
 ## Thanks to
 - [Mark Ostrander](https://github.com/ostranme) - thanks for some styles
-- [Stepan Petei](https://github.com/Stepan-Petei) - thanks for translate of README.md
+- [Stepan Petei](https://github.com/Stepan-Petei) - thank you for translating the documentation into Ukrainian
 
 ## License (MIT)
 
