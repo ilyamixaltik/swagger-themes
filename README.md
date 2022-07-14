@@ -157,8 +157,8 @@ async function bootstrap() {
     explorer: true,
     customCss: theme.getBuffer('classic')
   };
-  SwaggerModule.setup('api', app, document, optionsV1);
-  SwaggerModule.setup('api', app, document, optionsV2);
+  SwaggerModule.setup('api-v1', app, document, optionsV1);
+  SwaggerModule.setup('api-v2', app, document, optionsV2);
 
   await app.listen(3000);
 }
@@ -185,16 +185,11 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, config);
   const theme = new SwaggerTheme('v3');
-  const optionsV1 = {
-    explorer: true,
-    customCss: theme.getBuffer('dark')
-  };
-  const optionsV2 = {
-    explorer: true,
-    customCss: theme.getBuffer('classic')
-  };
-  SwaggerModule.setup('api', app, document, optionsV1);
-  SwaggerModule.setup('api', app, document, optionsV2);
+  const optionsV1 = theme.getDefaultConfig('dark');
+  const optionsV2 = theme.getDefaultConfig('classic');
+  
+  SwaggerModule.setup('api-v1', app, document, optionsV1);
+  SwaggerModule.setup('api-v2', app, document, optionsV2);
 
   await app.listen(3000);
 }
