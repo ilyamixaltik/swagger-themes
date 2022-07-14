@@ -8,6 +8,8 @@
 ## Navigation
   * [Installation](#installation)
   * [Example usage](#example-usage)
+    * [Use with Express](#use-with-express)
+    * [Use with NestJS](#use-with-nestjs)
   * [Two Swagger document](#two-swagger-document)
   * [Get default config](#get-default-config)
   * [Themes](#themes)
