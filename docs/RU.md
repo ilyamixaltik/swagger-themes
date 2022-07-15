@@ -168,7 +168,7 @@ bootstrap();
 ### Получить конфиг по-умолчанию
 > Метод получения конфига по-умолчанию для библиотеки @nestjs/swagger
 ```js
-// file main.ts
+// файл main.ts
 import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { SwaggerTheme } from 'swagger-themes';
