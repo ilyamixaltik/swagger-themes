@@ -8,8 +8,8 @@
 ## Навигация
 * [Установка](#установка)
 * [Примеры использования](#примеры-использования)
-* [Два Swagger документа](#два-swagger-документа)
-* [Получить конфиг по-умолчанию](#получить-конфиг-по-умолчанию)
+  * [Использование с Express](#использование-с-express)
+  * [Использование с NestJS](#использование-с-nestjs)
 * [Темы](#темы)
 * [Контакты](#мои-контакты)
 
@@ -95,6 +95,105 @@ const optionsV2 = theme.getDefaultConfig('classic');
 
 app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Тёмная тема документации
 app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Классическая тема документации
+```
+
+## Использование с NestJS
+### Стандартный пример
+> Стандартное подключение тёмной темы с NestJS. Подключение происходит через библиотеку @nestjs/swagger
+```js
+// файл main.ts
+import { NestFactory } from '@nestjs/core';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { SwaggerTheme } from 'swagger-themes';
+import { AppModule } from './app.module';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  const config = new DocumentBuilder()
+    .setTitle('Cats example')
+    .setDescription('The cats API description')
+    .setVersion('1.0')
+    .addTag('cats')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  const theme = new SwaggerTheme('v3');
+  const options = {
+    explorer: true,
+    customCss: theme.getBuffer('dark')
+  };
+  SwaggerModule.setup('api', app, document, options);
+
+  await app.listen(3000);
+}
+bootstrap();
+```
+
+### Два Swagger документа
+> Подключение 2 файлов документации. Для примера - используется 2 разные темы
+```js
+// файл main.ts
+import { NestFactory } from '@nestjs/core';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { SwaggerTheme } from 'swagger-themes';
+import { AppModule } from './app.module';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  const config = new DocumentBuilder()
+    .setTitle('Cats example')
+    .setDescription('The cats API description')
+    .setVersion('1.0')
+    .addTag('cats')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  const theme = new SwaggerTheme('v3');
+  const optionsV1 = {
+    explorer: true,
+    customCss: theme.getBuffer('dark')
+  };
+  const optionsV2 = {
+    explorer: true,
+    customCss: theme.getBuffer('classic')
+  };
+  SwaggerModule.setup('api-v1', app, document, optionsV1);
+  SwaggerModule.setup('api-v2', app, document, optionsV2);
+
+  await app.listen(3000);
+}
+bootstrap();
+```
+
+### Получить конфиг по-умолчанию
+> Метод получения конфига по-умолчанию для библиотеки @nestjs/swagger
+```js
+// файл main.ts
+import { NestFactory } from '@nestjs/core';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { SwaggerTheme } from 'swagger-themes';
+import { AppModule } from './app.module';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  const config = new DocumentBuilder()
+    .setTitle('Cats example')
+    .setDescription('The cats API description')
+    .setVersion('1.0')
+    .addTag('cats')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  const theme = new SwaggerTheme('v3');
+  const optionsV1 = theme.getDefaultConfig('dark');
+  const optionsV2 = theme.getDefaultConfig('classic');
+  
+  SwaggerModule.setup('api-v1', app, document, optionsV1);
+  SwaggerModule.setup('api-v2', app, document, optionsV2);
+
+  await app.listen(3000);
+}
+bootstrap();
 ```
 
 ## Темы
