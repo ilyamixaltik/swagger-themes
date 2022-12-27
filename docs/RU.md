@@ -1,4 +1,7 @@
 # Swagger темы
+[![npm](https://img.shields.io/npm/v/swagger-themes.svg)]()
+[![license](https://img.shields.io/npm/l/@nestjs/core.svg)]()
+[![downloads](https://img.shields.io/npm/dm/swagger-themes)]()
 
 ## Язык документации библиотеки:
 * [EN](../README.md)
