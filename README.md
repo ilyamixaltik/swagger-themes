@@ -1,4 +1,7 @@
 # Swagger themes
+[![npm](https://img.shields.io/npm/v/swagger-themes.svg)]()
+[![license](https://img.shields.io/npm/l/@nestjs/core.svg)]()
+[![downloads](https://img.shields.io/npm/dm/swagger-themes)]()
 
 ## Library documentation language:
   * [EN](#english)
