@@ -13,6 +13,7 @@
 * [Приклади використання](#приклади-використання)
   * [Використання з Express](#використання-з-express)
   * [Використання з NestJS](#використання-з-nestjs)
+  * [Використання з Fastify](#використання-з-fastify)
 * [Теми](#теми)
 * [Контакти](#мої-контакти)
 
@@ -197,6 +198,30 @@ async function bootstrap() {
     await app.listen(3000);
 }
 bootstrap();
+```
+
+## Використання з Fastify
+### Стандартний приклад
+> Стандартне підключення темної теми із Fastify. Підключення відбувається через бібліотеки @fastify/swagger та @fastify/swagger-ui
+```js
+const fastify = require('fastify')({ logger: true })
+const { SwaggerTheme } = require('swagger-themes');
+
+const theme = new SwaggerTheme('v3');
+const content = theme.getBuffer('dark');
+
+fastify.register(require('@fastify/swagger'));
+fastify.register(require('@fastify/swagger-ui'), {
+  theme: {
+    css: [
+      { filename: 'theme.css', content: content }
+    ],
+  }
+})
+
+fastify.listen({ port: 3000 }, (err) => {
+  if (err) throw err
+})
 ```
 
 ## Темы
