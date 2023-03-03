@@ -13,6 +13,7 @@
   * [Example usage](#example-usage)
     * [Use with Express](#use-with-express)
     * [Use with NestJS](#use-with-nestjs)
+    * [Use with Fastify](#use-with-fastify)
   * [Themes](#themes)
   * [Contacts](#my-contacts)
 
@@ -197,6 +198,30 @@ async function bootstrap() {
   await app.listen(3000);
 }
 bootstrap();
+```
+
+## Use with Fastify
+### Standard Example
+> Standard dark theme connection with Fastify. The connection takes place via the @fastify/swagger and @fastify/swagger-ui library
+```js
+const fastify = require('fastify')({ logger: true })
+const { SwaggerTheme } = require('swagger-themes');
+
+const theme = new SwaggerTheme('v3');
+const content = theme.getBuffer('dark');
+
+fastify.register(require('@fastify/swagger'));
+fastify.register(require('@fastify/swagger-ui'), {
+  theme: {
+    css: [
+      { filename: 'theme.css', content: content }
+    ],
+  }
+})
+
+fastify.listen({ port: 3000 }, (err) => {
+  if (err) throw err
+})
 ```
 
 ## Themes
