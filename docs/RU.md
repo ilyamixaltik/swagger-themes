@@ -200,8 +200,8 @@ async function bootstrap() {
 bootstrap();
 ```
 
-## Use with Fastify
-### Standard Example
+## Использование с Fastify
+### Стандартный пример
 > Стандартное подключение тёмной темы с Fastify. Подключение происходит через библиотеки @fastify/swagger и @fastify/swagger-ui
 ```js
 const fastify = require('fastify')({ logger: true })
