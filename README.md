@@ -101,6 +101,30 @@ app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, option
 app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Classic theme documentation
 ```
 
+## Use with Fastify
+### Standard Example
+> Standard dark theme connection with Fastify. The connection takes place via the @fastify/swagger and @fastify/swagger-ui library
+```js
+const fastify = require('fastify')({ logger: true })
+const { SwaggerTheme } = require('swagger-themes');
+
+const theme = new SwaggerTheme('v3');
+const content = theme.getBuffer('dark');
+
+fastify.register(require('@fastify/swagger'));
+fastify.register(require('@fastify/swagger-ui'), {
+  theme: {
+    css: [
+      { filename: 'theme.css', content: content }
+    ],
+  }
+})
+
+fastify.listen({ port: 3000 }, (err) => {
+  if (err) throw err
+})
+```
+
 ## Use with NestJS
 ### Standard Example
 > Standard dark theme connection with NestJS. The connection takes place via the @nestjs/swagger library
@@ -198,30 +222,6 @@ async function bootstrap() {
   await app.listen(3000);
 }
 bootstrap();
-```
-
-## Use with Fastify
-### Standard Example
-> Standard dark theme connection with Fastify. The connection takes place via the @fastify/swagger and @fastify/swagger-ui library
-```js
-const fastify = require('fastify')({ logger: true })
-const { SwaggerTheme } = require('swagger-themes');
-
-const theme = new SwaggerTheme('v3');
-const content = theme.getBuffer('dark');
-
-fastify.register(require('@fastify/swagger'));
-fastify.register(require('@fastify/swagger-ui'), {
-  theme: {
-    css: [
-      { filename: 'theme.css', content: content }
-    ],
-  }
-})
-
-fastify.listen({ port: 3000 }, (err) => {
-  if (err) throw err
-})
 ```
 
 ## Themes
