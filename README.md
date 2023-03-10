@@ -12,8 +12,8 @@
   * [Installation](#installation)
   * [Example usage](#example-usage)
     * [Use with Express](#use-with-express)
-    * [Use with NestJS](#use-with-nestjs)
     * [Use with Fastify](#use-with-fastify)
+    * [Use with NestJS](#use-with-nestjs)
   * [Themes](#themes)
   * [Contacts](#my-contacts)
 
