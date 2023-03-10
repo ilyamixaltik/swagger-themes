@@ -12,8 +12,8 @@
 * [Установка](#установка)
 * [Примеры использования](#примеры-использования)
   * [Использование с Express](#использование-с-express)
-  * [Использование с NestJS](#использование-с-nestjs)
   * [Использование с Fastify](#использование-с-fastify)
+  * [Использование с NestJS](#использование-с-nestjs)
 * [Темы](#темы)
 * [Контакты](#мои-контакты)
 
@@ -99,6 +99,30 @@ const optionsV2 = theme.getDefaultConfig('classic');
 
 app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Тёмная тема документации
 app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Классическая тема документации
+```
+
+## Использование с Fastify
+### Стандартный пример
+> Стандартное подключение тёмной темы с Fastify. Подключение происходит через библиотеки @fastify/swagger и @fastify/swagger-ui
+```js
+const fastify = require('fastify')({ logger: true })
+const { SwaggerTheme } = require('swagger-themes');
+
+const theme = new SwaggerTheme('v3');
+const content = theme.getBuffer('dark');
+
+fastify.register(require('@fastify/swagger'));
+fastify.register(require('@fastify/swagger-ui'), {
+  theme: {
+    css: [
+      { filename: 'theme.css', content: content }
+    ],
+  }
+})
+
+fastify.listen({ port: 3000 }, (err) => {
+  if (err) throw err
+})
 ```
 
 ## Использование с NestJS
@@ -198,30 +222,6 @@ async function bootstrap() {
   await app.listen(3000);
 }
 bootstrap();
-```
-
-## Использование с Fastify
-### Стандартный пример
-> Стандартное подключение тёмной темы с Fastify. Подключение происходит через библиотеки @fastify/swagger и @fastify/swagger-ui
-```js
-const fastify = require('fastify')({ logger: true })
-const { SwaggerTheme } = require('swagger-themes');
-
-const theme = new SwaggerTheme('v3');
-const content = theme.getBuffer('dark');
-
-fastify.register(require('@fastify/swagger'));
-fastify.register(require('@fastify/swagger-ui'), {
-  theme: {
-    css: [
-      { filename: 'theme.css', content: content }
-    ],
-  }
-})
-
-fastify.listen({ port: 3000 }, (err) => {
-  if (err) throw err
-})
 ```
 
 ## Темы
