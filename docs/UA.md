@@ -1,7 +1,7 @@
 # Swagger теми
-[![npm](https://img.shields.io/npm/v/swagger-themes.svg)]()
-[![license](https://img.shields.io/npm/l/@nestjs/core.svg)]()
-[![downloads](https://img.shields.io/npm/dm/swagger-themes)]()
+[![npm](https://img.shields.io/npm/v/swagger-themes.svg?style=for-the-badge&logoColor=white)]()
+[![license](https://img.shields.io/npm/l/@nestjs/core.svg?style=for-the-badge&logoColor=white)]()
+[![downloads](https://img.shields.io/npm/dm/swagger-themes?style=for-the-badge&logoColor=white)]()
 
 ## Мова документації бібліотеки:
 * [EN](../README.md)
