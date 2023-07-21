@@ -1,7 +1,9 @@
 # Swagger теми
 [![npm](https://img.shields.io/npm/v/swagger-themes.svg?style=for-the-badge&logoColor=white)]()
-[![license](https://img.shields.io/npm/l/@nestjs/core.svg?style=for-the-badge&logoColor=white)]()
 [![downloads](https://img.shields.io/npm/dm/swagger-themes?style=for-the-badge&logoColor=white)]()
+[![github issues](https://img.shields.io/github/issues/ilyamixaltik/swagger-themes?&style=for-the-badge&color=E0AF68)]()
+[![github last commits](https://img.shields.io/github/last-commit/ilyamixaltik/swagger-themes?style=for-the-badge&color=AD8EE6)]()
+[![license](https://img.shields.io/npm/l/@nestjs/core.svg?style=for-the-badge&logoColor=white)]()
 
 ## Мова документації бібліотеки:
 * [EN](../README.md)
