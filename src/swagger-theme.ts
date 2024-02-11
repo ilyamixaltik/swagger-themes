@@ -2,13 +2,16 @@ import * as fs from 'fs';
 import { DefaultConfig, SwaggerThemeName, VersionSwagger } from './types';
 
 export class SwaggerTheme {
-  constructor(readonly version: VersionSwagger) {}
+  constructor(readonly version?: VersionSwagger) {}
 
   getBuffer(name: SwaggerThemeName) {
-    if (!this.version || !name) return '';
+    if (!name) return '';
+    if (this.version) {
+      console.warn('Explicit version indication is deprecated')
+    }
 
     return fs.readFileSync(
-      __dirname + `/../themes/${this.version}/${name}.css`,
+      __dirname + `/../themes/${name}.css`,
       'utf8'
     );
   }
