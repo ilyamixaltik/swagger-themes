@@ -231,6 +231,8 @@ bootstrap();
 ![Classic](../screenshots/classic.jpeg)
 > dark
 ![Dark](../screenshots/dark.jpeg)
+> dracula
+![Dark](../screenshots/dracula.jpeg)
 > feeling-blue
 ![Feeling blue](../screenshots/feeling-blue.jpeg)
 > flattop
