@@ -232,7 +232,7 @@ bootstrap();
 > dark
 ![Dark](../screenshots/dark.jpeg)
 > dracula
-![Dark](../screenshots/dracula.jpeg)
+![Dracula](../screenshots/dracula.jpeg)
 > feeling-blue
 ![Feeling blue](../screenshots/feeling-blue.jpeg)
 > flattop
