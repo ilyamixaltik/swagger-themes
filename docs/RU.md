@@ -229,6 +229,8 @@ bootstrap();
 ## Темы
 > classic
 ![Classic](../screenshots/classic.jpeg)
+> dark-monokai
+![Dark monokai](../screenshots/dark-monokai.jpeg)
 > dark
 ![Dark](../screenshots/dark.jpeg)
 > dracula
@@ -237,6 +239,8 @@ bootstrap();
 ![Feeling blue](../screenshots/feeling-blue.jpeg)
 > flattop
 ![Flattop](../screenshots/flattop.jpeg)
+> druvbox
+![Druvbox](../screenshots/druvbox.jpeg)
 > material
 ![Material](../screenshots/material.jpeg)
 > monokai
@@ -245,6 +249,10 @@ bootstrap();
 ![Muted](../screenshots/muted.jpeg)
 > newspaper
 ![Newspaper](../screenshots/newspaper.jpeg)
+> nord-dark
+![Nord dark](../screenshots/nord-dark.jpeg)
+> one-dark
+![One dark](../screenshots/one-dark.jpeg)
 > outline
 ![Outline](../screenshots/outline.jpeg)
 
