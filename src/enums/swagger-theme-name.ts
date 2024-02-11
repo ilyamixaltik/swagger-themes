@@ -1,12 +1,16 @@
 export enum SwaggerThemeNameEnum {
   CLASSIC = 'classic',
+  DARK_MONOKAI = 'dark-monokai',
   DARK = 'dark',
   DRACULA = 'dracula',
   FEELING_BLUE = 'feeling-blue',
   FLATTOP = 'flattop',
+  GRUVBOX = 'gruvbox',
   MATERIAL = 'material',
   MONOKAI = 'monokai',
   MUTED = 'muted',
   NEWSPAPER = 'newspaper',
+  NORD_DARK = 'nord-dark',
+  ONE_DARK = 'one-dark',
   OUTLINE = 'outline',
 }
