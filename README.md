@@ -239,8 +239,8 @@ bootstrap();
 ![Feeling blue](./screenshots/feeling-blue.jpeg)
 > flattop
 ![Flattop](./screenshots/flattop.jpeg)
-> druvbox
-![Druvbox](./screenshots/druvbox.jpeg)
+> gruvbox
+![Gruvbox](./screenshots/gruvbox.jpeg)
 > material
 ![Material](./screenshots/material.jpeg)
 > monokai
