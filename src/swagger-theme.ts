@@ -7,7 +7,7 @@ export class SwaggerTheme {
   getBuffer(name: SwaggerThemeName) {
     if (!name) return '';
     if (this.version) {
-      console.warn('Explicit version indication is deprecated')
+      throw new Error('Explicit version indication is deprecated')
     }
 
     return fs.readFileSync(
