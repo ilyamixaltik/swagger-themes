@@ -255,6 +255,7 @@ bootstrap();
 
 ## Thanks to
 - [Mark Ostrander](https://github.com/ostranme) - thanks for some styles
+- [oqo0](https://github.com/oqo0) - thanks for some styles
 - [Stepan Petei](https://github.com/Stepan-Petei) - thank you for translating the documentation into Ukrainian
 
 [License](https://github.com/ilyamixaltik/swagger-themes/blob/main/LICENSE.md)

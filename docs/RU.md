@@ -255,6 +255,7 @@ bootstrap();
 
 ## Благодаря
 - [Mark Ostrander](https://github.com/ostranme) - спасибо за несколько стилей
+- [oqo0](https://github.com/oqo0) - спасибо за несколько стилей
 - [Stepan Petei](https://github.com/Stepan-Petei) - спасибо за перевод документации на украинский язык
 
 [Лицензия](https://github.com/ilyamixaltik/swagger-themes/blob/main/LICENSE.md)
