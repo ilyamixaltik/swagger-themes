@@ -37,7 +37,7 @@ yarn add swagger-themes
 ```js
 const { SwaggerTheme } = require('swagger-themes');
 
-const theme = new SwaggerTheme('v3'); // Specifying the Swagger Version
+const theme = new SwaggerTheme();
 const darkStyle = theme.getBuffer('dark'); // Getting a Style
 ```
 
@@ -51,7 +51,7 @@ const { SwaggerTheme } = require('swagger-themes');
 const swaggerDocument = require('./swagger.json');
 
 const app = express();
-const theme = new SwaggerTheme('v3');
+const theme = new SwaggerTheme();
 
 const options = {
   explorer: true,
@@ -70,7 +70,7 @@ const { SwaggerTheme } = require('swagger-themes');
 const swaggerDocument = require('./swagger.json');
 
 const app = express();
-const theme = new SwaggerTheme('v3');
+const theme = new SwaggerTheme();
 
 const optionsV1 = {
   explorer: true,
@@ -94,7 +94,7 @@ const { SwaggerTheme } = require('swagger-themes');
 const swaggerDocument = require('./swagger.json');
 
 const app = express();
-const theme = new SwaggerTheme('v3');
+const theme = new SwaggerTheme();
 
 const optionsV1 = theme.getDefaultConfig('dark');
 const optionsV2 = theme.getDefaultConfig('classic');
@@ -110,7 +110,7 @@ app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, option
 const fastify = require('fastify')({ logger: true })
 const { SwaggerTheme } = require('swagger-themes');
 
-const theme = new SwaggerTheme('v3');
+const theme = new SwaggerTheme();
 const content = theme.getBuffer('dark');
 
 fastify.register(require('@fastify/swagger'));
@@ -147,7 +147,7 @@ async function bootstrap() {
     .addTag('cats')
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  const theme = new SwaggerTheme('v3');
+  const theme = new SwaggerTheme();
   const options = {
     explorer: true,
     customCss: theme.getBuffer('dark')
@@ -178,7 +178,7 @@ async function bootstrap() {
     .addTag('cats')
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  const theme = new SwaggerTheme('v3');
+  const theme = new SwaggerTheme();
   const optionsV1 = {
     explorer: true,
     customCss: theme.getBuffer('dark')
@@ -214,7 +214,7 @@ async function bootstrap() {
     .addTag('cats')
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  const theme = new SwaggerTheme('v3');
+  const theme = new SwaggerTheme();
   const optionsV1 = theme.getDefaultConfig('dark');
   const optionsV2 = theme.getDefaultConfig('classic');
   
