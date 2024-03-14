@@ -35,10 +35,10 @@ yarn add swagger-themes
 ## Example usage
 > Connecting and using the library
 ```js
-const { SwaggerTheme } = require('swagger-themes');
+const { SwaggerTheme, SwaggerThemeNameEnum } = require('swagger-themes');
 
 const theme = new SwaggerTheme();
-const darkStyle = theme.getBuffer('dark'); // Getting a Style
+const darkStyle = theme.getBuffer(SwaggerThemeNameEnum.DARK); // Getting a Style
 ```
 
 ## Use with Express
@@ -47,7 +47,7 @@ const darkStyle = theme.getBuffer('dark'); // Getting a Style
 ```js
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
-const { SwaggerTheme } = require('swagger-themes');
+const { SwaggerTheme; SwaggerThemeNameEnum } = require('swagger-themes');
 const swaggerDocument = require('./swagger.json');
 
 const app = express();
@@ -55,7 +55,7 @@ const theme = new SwaggerTheme();
 
 const options = {
   explorer: true,
-  customCss: theme.getBuffer('dark')
+  customCss: theme.getBuffer(SwaggerThemeNameEnum.DARK)
 };
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
@@ -66,7 +66,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options))
 ```js
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
-const { SwaggerTheme } = require('swagger-themes');
+const { SwaggerTheme, SwaggerThemeNameEnum } = require('swagger-themes');
 const swaggerDocument = require('./swagger.json');
 
 const app = express();
@@ -74,11 +74,11 @@ const theme = new SwaggerTheme();
 
 const optionsV1 = {
   explorer: true,
-  customCss: theme.getBuffer('dark')
+  customCss: theme.getBuffer(SwaggerThemeNameEnum.DARK)
 };
 const optionsV2 = {
   explorer: true,
-  customCss: theme.getBuffer('classic')
+  customCss: theme.getBuffer(SwaggerThemeNameEnum.CLASSIC)
 }
 
 app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Dark theme documentation
@@ -90,14 +90,14 @@ app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, option
 ```js
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
-const { SwaggerTheme } = require('swagger-themes');
+const { SwaggerTheme, SwaggerThemeNameEnum } = require('swagger-themes');
 const swaggerDocument = require('./swagger.json');
 
 const app = express();
 const theme = new SwaggerTheme();
 
-const optionsV1 = theme.getDefaultConfig('dark');
-const optionsV2 = theme.getDefaultConfig('classic');
+const optionsV1 = theme.getDefaultConfig(SwaggerThemeNameEnum.DARK);
+const optionsV2 = theme.getDefaultConfig(SwaggerThemeNameEnum.CLASSIC);
 
 app.use('/api-docs/v1', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV1)); // Dark theme documentation
 app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, optionsV2)); // Classic theme documentation
@@ -108,10 +108,10 @@ app.use('/api-docs/v2', swaggerUi.serve, swaggerUi.setup(swaggerDocument, option
 > Standard dark theme connection with Fastify. The connection takes place via the @fastify/swagger and @fastify/swagger-ui library
 ```js
 const fastify = require('fastify')({ logger: true })
-const { SwaggerTheme } = require('swagger-themes');
+const { SwaggerTheme, SwaggerThemeNameEnum } = require('swagger-themes');
 
 const theme = new SwaggerTheme();
-const content = theme.getBuffer('dark');
+const content = theme.getBuffer(SwaggerThemeNameEnum.DARK);
 
 fastify.register(require('@fastify/swagger'));
 fastify.register(require('@fastify/swagger-ui'), {
@@ -134,7 +134,7 @@ fastify.listen({ port: 3000 }, (err) => {
 // file main.ts
 import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
-import { SwaggerTheme } from 'swagger-themes';
+import { SwaggerTheme, SwaggerThemeNameEnum } from 'swagger-themes';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -150,7 +150,7 @@ async function bootstrap() {
   const theme = new SwaggerTheme();
   const options = {
     explorer: true,
-    customCss: theme.getBuffer('dark')
+    customCss: theme.getBuffer(SwaggerThemeNameEnum.DARK)
   };
   SwaggerModule.setup('api', app, document, options);
 
@@ -165,7 +165,7 @@ bootstrap();
 // file main.ts
 import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
-import { SwaggerTheme } from 'swagger-themes';
+import { SwaggerTheme, SwaggerThemeNameEnum } from 'swagger-themes';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -181,11 +181,11 @@ async function bootstrap() {
   const theme = new SwaggerTheme();
   const optionsV1 = {
     explorer: true,
-    customCss: theme.getBuffer('dark')
+    customCss: theme.getBuffer(SwaggerThemeNameEnum.DARK)
   };
   const optionsV2 = {
     explorer: true,
-    customCss: theme.getBuffer('classic')
+    customCss: theme.getBuffer(SwaggerThemeNameEnum.CLASSIC)
   };
   SwaggerModule.setup('api-v1', app, document, optionsV1);
   SwaggerModule.setup('api-v2', app, document, optionsV2);
@@ -201,7 +201,7 @@ bootstrap();
 // file main.ts
 import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
-import { SwaggerTheme } from 'swagger-themes';
+import { SwaggerTheme, SwaggerThemeNameEnum } from 'swagger-themes';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -215,8 +215,8 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, config);
   const theme = new SwaggerTheme();
-  const optionsV1 = theme.getDefaultConfig('dark');
-  const optionsV2 = theme.getDefaultConfig('classic');
+  const optionsV1 = theme.getDefaultConfig(SwaggerThemeNameEnum.DARK);
+  const optionsV2 = theme.getDefaultConfig(SwaggerThemeNameEnum.CLASSIC);
   
   SwaggerModule.setup('api-v1', app, document, optionsV1);
   SwaggerModule.setup('api-v2', app, document, optionsV2);
